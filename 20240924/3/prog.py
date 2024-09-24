@@ -1,15 +1,15 @@
-s = []
-while True:
-    try:
-        n = list(eval(input()))
-        if not n:
-            break
-        s.append(n)
-    except EOFError:
-        break
+n = list(eval(input()))
+ln = len(n)
+m1 = []
+m2 = []
 
-m1 = s[:len(s) // 2]
-m2 = s[len(s) // 2:]
+m1.append(n)
+for i in range(ln - 1):
+    m1.append(list(eval(input())))
+
+for i in range(ln):
+    m2.append(list(eval(input())))
+
 res = [[0 for i in range(len(m1))] for j in range(len(m2[0]))]
 
 for i in range(len(res)):
