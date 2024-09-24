@@ -1,7 +1,12 @@
 s = []
-while n := input():
-    newline = list(eval(n))
-    s.append(newline)
+while True:
+    try:
+        n = list(eval(input()))
+        if not n:
+            break
+        s.append(n)
+    except EOFError:
+        break
 
 m1 = s[:len(s) // 2]
 m2 = s[len(s) // 2:]
