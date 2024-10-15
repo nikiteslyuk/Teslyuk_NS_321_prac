@@ -1,0 +1,3 @@
+:decorate s "--<<{}>>--".format(s)
+decorate "Example"
+quit "{}, {}"
