@@ -1,0 +1,8 @@
+p, q, r = Omnibus(), Omnibus(), Omnibus()
+p.m = q.n = r.o = "test"
+print(p.m, q.n, r.o)
+del p.n
+print(p.m, q.n, r.o)
+del r.o
+print(p.m, q.n)
+

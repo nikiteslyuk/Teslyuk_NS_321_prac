@@ -1,0 +1,8 @@
+x, y = Omnibus(), Omnibus()
+x.a = x.b = 1
+y.a = y.c = 2
+print(x.a, x.b, y.a, y.c)
+del x.a, y.c
+print(x.b, y.a)
+x.a = y.c = 3
+print(x.a, y.a, y.c)
