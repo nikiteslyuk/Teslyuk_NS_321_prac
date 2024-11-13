@@ -9,7 +9,7 @@ class BadTriangle(Exception):
 def triangleSquare(instr):
     coordinates = eval(instr)
 
-    if not (isinstance(coordinates, tuple) and len(coordinates) == 3):
+    if len(coordinates) != 3 or not isinstance(coordinates[0], tuple):
         raise InvalidInput
 
     (x1, y1), (x2, y2), (x3, y3) = coordinates
@@ -32,8 +32,7 @@ def triangleSquare(instr):
 
 while True:
     try:
-        inp = input()
-        area = triangleSquare(inp)
+        area = triangleSquare(input())
     except InvalidInput:
         print("Invalid input")
     except BadTriangle:

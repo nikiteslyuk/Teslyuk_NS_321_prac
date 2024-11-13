@@ -1,0 +1,7 @@
+b = DivStr("123456789")
+print(*b // 3)
+print(b % 3)
+print(*b % 5 // 2)
+print(b.swapcase() % 2)
+print(*b[0:6] // 2)
+print(b % 4 + DivStr() + b % 1)
