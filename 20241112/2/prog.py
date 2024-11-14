@@ -7,7 +7,10 @@ class BadTriangle(Exception):
 
 
 def triangleSquare(instr):
-    coordinates = eval(instr)
+    try:
+        coordinates = eval(instr)
+    except NameError:
+        raise InvalidInput
 
     if len(coordinates) != 3 or not isinstance(coordinates[0], tuple):
         raise InvalidInput
